@@ -1,15 +1,18 @@
 <script>
+	import '../app.postcss';
 	import './styles.css';
 </script>
 
-<div class="app">
+<div class="appStyle">
 	<slot />
 </div>
 
 <style>
-	.app {
+	.appStyle {
 		display: flex;
 		flex-direction: column;
 		min-height: 100vh;
+		min-width: 100vw;
+		width: 100%;
 	}
 </style>

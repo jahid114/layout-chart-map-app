@@ -1,5 +1,5 @@
 <div class="box">
-	<div class="circle">
+	<div class="bg-yellow-100 circle">
 		<div class="rec1" />
 		<div class="rec2" />
 	</div>
@@ -18,7 +18,6 @@
 	.circle {
 		height: 200px;
 		width: 200px;
-		background-color: lightyellow;
 		border-radius: 50%;
 		position: relative;
 		overflow: hidden;

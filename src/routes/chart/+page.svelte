@@ -3,6 +3,6 @@
 	<meta name="description" content="Chart Page" />
 </svelte:head>
 
-<div class="text-column">
+<div class="f">
 	<h1>Chart</h1>
 </div>
