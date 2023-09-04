@@ -1,3 +1,7 @@
+<script>
+	import MountainSticker from '../../lib/MountainSticker.svelte';
+</script>
+
 <svelte:head>
 	<title>Layout</title>
 	<meta name="description" content="Layout Page" />
@@ -8,7 +12,9 @@
 	<div class="rose-400" />
 	<div class="cyan-400" />
 	<div class="teal-400" />
-	<div class="yellow-400" />
+	<div class="yellow-400">
+		<MountainSticker />
+	</div>
 	<div class="emeraid-400" />
 	<div class="fuchsia-400" />
 </div>
@@ -44,8 +50,11 @@
 		grid-area: t-4;
 	}
 	.yellow-400 {
-		background-color: yellow;
+		background-color: lightyellow;
 		grid-area: y-4;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 	.emeraid-400 {
 		background-color: lightseagreen;
