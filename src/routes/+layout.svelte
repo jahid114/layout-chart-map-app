@@ -13,6 +13,5 @@
 		flex-direction: column;
 		min-height: 100vh;
 		min-width: 100vw;
-		width: 100%;
 	}
 </style>

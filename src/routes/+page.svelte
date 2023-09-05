@@ -25,7 +25,7 @@
 		align-items: center;
 	}
 
-	ul li {
+	li {
 		width: 4rem;
 		height: 2rem;
 		list-style: none;
