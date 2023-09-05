@@ -10,7 +10,7 @@
 	import { Stroke, Style } from 'ol/style.js';
 	import 'ol/ol.css';
 
-	onMount(() => {
+	onMount(async () => {
 		const map = new Map({
 			layers: [new TileLayer({ source: new OSM() })],
 			view: new View({
