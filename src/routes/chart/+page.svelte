@@ -1,4 +1,5 @@
 <script>
+	import Chart from '$lib/Chart.svelte';
 	export let data;
 	let temp = [...data.countries];
 	let chartData = [];
@@ -21,9 +22,14 @@
 	<title>Chart</title>
 	<meta name="description" content="Chart Page" />
 </svelte:head>
-<div class="md:p-10 p-2 h-screen w-screen">
-	<div class="overflow-auto rounded-lg">
-		<table class="w-full font-sans border border-gray-200">
+<div class="md:p-10 p-2 h-screen w-full relative">
+	<div class="md:w-1/3 w-full md:right-0 md:absolute m-1 md:ml-3 p-3 mt-3 bg-gray-50 h-3/4">
+		<p class="text-md p-3 font-sans font-bold">Countries</p>
+		<hr />
+		<div><Chart {chartData} {chartLabels} /></div>
+	</div>
+	<div class="overflow-auto rounded-lg m-3">
+		<table class="md:w-2/3 w-full font-sans border border-gray-200">
 			<thead class=" bg-gray-50 border-b-2 border-gray-400">
 				<tr>
 					<th class="p-3 text-sm font-bold tracking-wide text-center">Flag</th>
@@ -32,7 +38,7 @@
 					<th class="p-3 text-sm font-bold tracking-wide text-center">CIOC</th>
 					<th class="p-3 text-sm font-bold tracking-wide text-center">UN Member Status</th>
 					<th class="p-3 text-sm font-bold tracking-wide text-center">Currencies</th>
-					<th class="w-48 p-3 text-sm font-bold tracking-wide text-center">Languages</th>
+					<th class="w-48 p-5 text-sm font-bold tracking-wide text-center">Languages</th>
 				</tr>
 			</thead>
 			<tbody class="divide-y divide-gray-200 bg-gray-100">
@@ -66,7 +72,7 @@
 									>{Object.keys(country.currencies).join(' , ')}
 								</span>{:else}N/A{/if}</td
 						>
-						<td class=" w-48 p-3 text-sm font-medium text-gray-700 text-center"
+						<td class=" w-48 p-5 text-sm font-medium text-gray-700 text-center"
 							>{#if country.languages}<span
 									>{Object.values(country.languages).join(' , ')}
 								</span>{:else}N/A{/if}</td
