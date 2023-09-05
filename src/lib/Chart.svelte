@@ -36,12 +36,17 @@
 				]
 			},
 			options: {
-				responsive: false
+				responsive: false,
+				plugins: {
+					legend: {
+						position: 'bottom'
+					}
+				}
 			}
 		});
 	});
 </script>
 
-<div class="w-full h-60 flex justify-center items-center pt-10">
+<div class="w-full h-2/3 flex justify-center items-center pt-10">
 	<canvas id="chart" class="w-4/5 m-4 mt-20 absolute top-0" />
 </div>

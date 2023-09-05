@@ -25,10 +25,14 @@
 		align-items: center;
 	}
 
+	ul {
+		list-style: none;
+		text-decoration: none;
+	}
+
 	li {
 		width: 4rem;
 		height: 2rem;
-		list-style: none;
 		background-color: lightcoral;
 		margin-bottom: 10px;
 		border: 1px solid gray;

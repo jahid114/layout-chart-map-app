@@ -23,7 +23,9 @@
 	<meta name="description" content="Chart Page" />
 </svelte:head>
 <div class="md:p-10 p-2 h-screen w-full relative">
-	<div class="md:w-1/3 w-full md:right-0 md:absolute m-1 md:ml-3 p-3 mt-3 bg-gray-50 h-3/4">
+	<div
+		class="md:w-1/3 w-full md:right-0 md:absolute m-1 md:ml-3 p-3 mt-3 bg-gray-50 h-3/4 rounded-md"
+	>
 		<p class="text-md p-3 font-sans font-bold">Countries</p>
 		<hr />
 		<div><Chart {chartData} {chartLabels} /></div>
@@ -45,7 +47,11 @@
 				{#each data.countries as country}
 					<tr>
 						<td class="p-3 flex justify-center items-center"
-							><img class=" h-12 w-20" src={country.flags.svg} alt={country.name.common} /></td
+							><img
+								class="h-12 w-20 rounded-md"
+								src={country.flags.svg}
+								alt={country.name.common}
+							/></td
 						>
 						<td class=" w-28 p-3 text-sm font-medium text-gray-700 text-center"
 							>{country.name.common}</td
