@@ -22,14 +22,14 @@
 						data: chartData,
 						backgroundColor: [
 							'yellow',
+							'red',
 							'aqua',
 							'pink',
 							'lightgreen',
 							'gold',
 							'lightblue',
-							'red',
-							'lightcyan',
-							'lightyellow',
+							'indigo',
+							'purple',
 							'green'
 						]
 					}
@@ -39,7 +39,10 @@
 				responsive: false,
 				plugins: {
 					legend: {
-						position: 'bottom'
+						position: 'bottom',
+						labels: {
+							usePointStyle: true
+						}
 					}
 				}
 			}
