@@ -10,6 +10,11 @@
 	import { Stroke, Style } from 'ol/style.js';
 	import 'ol/ol.css';
 
+	const mapDesignUrl = import.meta.glob('/src/routes/map/countries.geojson', {
+		eager: true,
+		as: 'url'
+	});
+
 	onMount(async () => {
 		const map = new Map({
 			layers: [new TileLayer({ source: new OSM() })],
@@ -24,7 +29,7 @@
 			new VectorLayer({
 				source: new VectorSource({
 					format: new GeoJSON(),
-					url: 'src/routes/map/countries.geojson'
+					url: mapDesignUrl['/src/routes/map/countries.geojson']
 				}),
 				style: new Style({
 					stroke: new Stroke({
